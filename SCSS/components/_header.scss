@@ -5,7 +5,6 @@
 .header {
   width: 100vw;
   background-color: $whiteFontCl;
-  z-index: 1000;
   padding-top: 16px;
   position: fixed;
     
@@ -36,6 +35,9 @@
     overflow: visible;
   }
 }
+.menu-modal.is-open{
+  transform: translateX(0);
+}
 .menu-modal{
   position: fixed;
   top: 0;
@@ -45,14 +47,10 @@
   background-color: #e86f54;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-150%);
-  transition: transform 250ms
-  
+  transition: transform 250ms;
 
-  & .is-open{
-    transform: translateX(0);
-  }
   &__button{
-    display: flex;
+  display: flex;
   justify-content: flex-end;
   padding-top: 16px;
   padding-right: 16px;
@@ -61,8 +59,10 @@
     fill: #ffffff;
   background: none;
   border: none;
+  
   }
   &__list{
+    height: 100vh;
     padding: 0;
   margin: auto;
   display: flex;
