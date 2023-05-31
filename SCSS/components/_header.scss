@@ -43,16 +43,13 @@
   width: 100vw;
   height: 100vh;
   background-color: #e86f54;
-  z-index: 9;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-150%);
-  transition: transform 250ms ease-in-out;
-  overflow: hidden;
+  transition: transform 250ms
   
 
-  &.is-open{
+  & .is-open{
     transform: translateX(0);
-    display: block;
   }
   &__button{
     display: flex;
@@ -85,10 +82,6 @@
 
 &__link{
   text-decoration: none;
-  font-size: 20px;
-  line-height: 1.2;
-  color: $whiteFontCl;
-  cursor: pointer;
 
 &:visited {
   color: $whiteFontCl;
