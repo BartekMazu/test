@@ -1,0 +1,93 @@
+@use "../utils/vars" as *;
+// .header:has(.header__menu-button.is-active){
+//   background-color: #0000;
+// }
+.header {
+  width: 100vw;
+  background-color: $whiteFontCl;
+  z-index: 1000;
+  padding-top: 16px;
+  position: fixed;
+    
+
+  &__ul {
+    display: flex;
+    gap: 14px;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+  }
+
+  &__nav {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  &__menu-button {
+    cursor: pointer;
+
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+    padding: 0px;
+    overflow: visible;
+  }
+}
+.menu-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e86f54;
+  z-index: 9;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-150%);
+  transition: transform 250ms ease-in-out;
+  overflow: hidden;
+  
+
+  &.is-open{
+    transform: translateX(0);
+    display: block;
+  }
+  &__button{
+    display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  padding-right: 16px;
+  }
+  &__button-close{
+    fill: #ffffff;
+  background: none;
+  border: none;
+  }
+  &__list{
+    padding: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  text-decoration: none;
+  padding-top: 84px;
+  }
+  &__item{
+    
+  font-size: 20px;
+  line-height: 1.2;
+  color: $whiteFontCl;
+  cursor: pointer;
+  }
+
+&__link{
+  text-decoration: none;
+
+&:visited {
+  color: $whiteFontCl;
+}
+}
+}
